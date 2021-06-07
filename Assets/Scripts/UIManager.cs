@@ -93,6 +93,15 @@ public class UIManager : MonoBehaviour
     {
         gameOverCanvas.enabled = true;
         maxScoreText.text = PlayerPrefs.GetInt("max_score", 0).ToString();
+        StartCoroutine(ToggleRestartButton());
+    }
+
+    IEnumerator ToggleRestartButton()
+    {
+        GameObject restartButton = gameOverCanvas.gameObject.transform.GetChild(0).gameObject;
+        restartButton.GetComponent<Image>().enabled = false;
+        yield return new WaitForSeconds(1f);
+        restartButton.GetComponent<Image>().enabled = true;
     }
 
     public void HideGameOverCanvas()
