@@ -67,7 +67,6 @@ public class UIManager : MonoBehaviour
     {
         pointsText.text = score.ToString();
         gamePoints.text = score.ToString();
-        maxScoreText.text = PlayerPrefs.GetInt("max_score", 0).ToString();
     }
 
     public void ShowGameCanvas()
@@ -93,6 +92,7 @@ public class UIManager : MonoBehaviour
     public void ShowGameOverCanvas()
     {
         gameOverCanvas.enabled = true;
+        maxScoreText.text = PlayerPrefs.GetInt("max_score", 0).ToString();
     }
 
     public void HideGameOverCanvas()
