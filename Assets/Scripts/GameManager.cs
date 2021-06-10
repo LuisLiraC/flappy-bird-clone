@@ -34,16 +34,28 @@ public class GameManager : MonoBehaviour
         switch (gameState)
         {
             case GameState.Menu:
-                // TODO
+                UIManager.instance.ShowMenuCanvas();
+                UIManager.instance.HideGameOverCanvas();
+                UIManager.instance.HideGameCanvas();
+
+                UIManager.instance.StartFloorAnimation();
+                ObstacleGenerator.instance.DeleteObstacles();
+
+                UIManager.instance.ShowInstructions();
+
+                playerController.InitialState();
                 break;
             case GameState.InGame:
                 UIManager.instance.HideMenuCanvas();
                 UIManager.instance.HideGameOverCanvas();
                 UIManager.instance.ShowGameCanvas();
+
                 UIManager.instance.StartFloorAnimation();
+                ObstacleGenerator.instance.DeleteObstacles();
+
                 UIManager.instance.HideInstructions();
                 playerController.StartGame();
-                ObstacleGenerator.instance.DeleteObstacles();
+                
                 break;
             case GameState.GameOver:
                 UIManager.instance.HideNewScoreSprite();
@@ -80,6 +92,20 @@ public class GameManager : MonoBehaviour
     {
         playerPoints += points;
         UIManager.instance.UpdateScore(playerPoints);
+    }
+
+    public void BacktoMenu()
+    {
+        SetGameState(GameState.Menu);
+    }
+
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit()
+        #endif
     }
 
 }

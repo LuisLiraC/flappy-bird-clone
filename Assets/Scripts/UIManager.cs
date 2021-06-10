@@ -7,43 +7,26 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    [SerializeField]
-    public Canvas menuCanvas;
-
-    [SerializeField]
-    public Canvas gameCanvas;
-
-    [SerializeField]
-    public Canvas gameOverCanvas;
-
-    [SerializeField]
-    private Text pointsText;
-
-    [SerializeField]
-    private Text gamePoints;
-
-    [SerializeField]
-    private Text maxScoreText;
-
-    [SerializeField]
-    private Image newScoreSprite;
-
-    [SerializeField]
-    private GameObject floor;
-
+    [Header("Global")]
+    [SerializeField] private GameObject floor;
     private Animator floorAnimator;
 
-    [SerializeField]
-    private Image readyTitle;
+    [Header("Menu View")]
+    [SerializeField] private Canvas menuCanvas;
 
-    [SerializeField]
-    private Image instructions;
+    [Header("Game View")]
+    [SerializeField] private Canvas gameCanvas;
+    [SerializeField] private Image readyTitle;
+    [SerializeField] private Image instructions;
+    [SerializeField] private Text pointsText;
 
-    [SerializeField]
-    private Image medalContainer;
-
-    [SerializeField]
-    private List<Sprite> medals;
+    [Header("Game Over View")]
+    [SerializeField] private Canvas gameOverCanvas;
+    [SerializeField] private Text gamePoints;
+    [SerializeField] private Text maxScoreText;
+    [SerializeField] private Image newScoreSprite;
+    [SerializeField] private Image medalContainer;
+    [SerializeField] private List<Sprite> medals;
 
 
     private void Awake()
@@ -93,15 +76,23 @@ public class UIManager : MonoBehaviour
     {
         gameOverCanvas.enabled = true;
         maxScoreText.text = PlayerPrefs.GetInt("max_score", 0).ToString();
-        StartCoroutine(ToggleRestartButton());
+        StartCoroutine(ToggleButtons());
     }
 
-    IEnumerator ToggleRestartButton()
+    IEnumerator ToggleButtons()
     {
         GameObject restartButton = gameOverCanvas.gameObject.transform.GetChild(0).gameObject;
+        GameObject menuButton = gameOverCanvas.gameObject.transform.GetChild(1).gameObject;
+        GameObject exitButton = gameOverCanvas.gameObject.transform.GetChild(2).gameObject;
         restartButton.GetComponent<Image>().enabled = false;
+        menuButton.GetComponent<Image>().enabled = false;
+        exitButton.GetComponent<Image>().enabled = false;
+
         yield return new WaitForSeconds(1f);
+
         restartButton.GetComponent<Image>().enabled = true;
+        menuButton.GetComponent<Image>().enabled = true;
+        exitButton.GetComponent<Image>().enabled = true;
     }
 
     public void HideGameOverCanvas()
@@ -133,6 +124,12 @@ public class UIManager : MonoBehaviour
     {
         pointsText.enabled = false;
         StartCoroutine(HideAssets());
+    }
+
+    public void ShowInstructions()
+    {
+        readyTitle.enabled = true;
+        instructions.enabled = true;
     }
 
     IEnumerator HideAssets()

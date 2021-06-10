@@ -31,14 +31,20 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        
+    }
+
+    public void InitialState()
+    {
+        animator.enabled = true;
+        gameObject.transform.rotation = Quaternion.identity;
+        transform.position = Vector3.zero;
         rigidBody.gravityScale = 0;
     }
 
     public void StartGame()
     {
-        animator.enabled = true;
-        gameObject.transform.rotation = Quaternion.identity;
-        transform.position = Vector3.zero;
+        InitialState();
         rigidBody.gravityScale = 0.3f;
     }
 

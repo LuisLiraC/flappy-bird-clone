@@ -73,10 +73,10 @@ TextureImporter:
     second: sprite_map_24
   - first:
       213: -7156605694911200905
-    second: sprite_map_26
+    second: exit_button
   - first:
       213: -2785085506718858375
-    second: sprite_map_27
+    second: options_button
   - first:
       213: 3300685881868803390
     second: sprite_map_28
@@ -1958,6 +1958,48 @@ TextureImporter:
       bones: []
       spriteID: 0e13e8ad7147ade80800000000000000
       internalID: -8153076529601039904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exit_button
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 239
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771c74da901aeac90800000000000000
+      internalID: -7156605694911200905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: options_button
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 221
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9730fe6dc736959d0800000000000000
+      internalID: -2785085506718858375
       vertices: []
       indices: 
       edges: []
