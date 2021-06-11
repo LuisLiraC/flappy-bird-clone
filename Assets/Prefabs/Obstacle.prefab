@@ -156,6 +156,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleSpeed: 1
+  pipesUp:
+  - {fileID: 8220469907726600862, guid: c9d75f2eb46b8c747b68a0ab211a8a2b, type: 3}
+  - {fileID: -5952482096821418217, guid: c9d75f2eb46b8c747b68a0ab211a8a2b, type: 3}
+  pipesDown:
+  - {fileID: -6887113454546567498, guid: c9d75f2eb46b8c747b68a0ab211a8a2b, type: 3}
+  - {fileID: -5762351982163086593, guid: c9d75f2eb46b8c747b68a0ab211a8a2b, type: 3}
 --- !u!1 &1731542323931490225
 GameObject:
   m_ObjectHideFlags: 0

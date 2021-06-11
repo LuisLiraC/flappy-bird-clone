@@ -7,9 +7,18 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private float obstacleSpeed = 1f;
 
+    [SerializeField]
+    private List<Sprite> pipesUp;
+
+    [SerializeField]
+    private List<Sprite> pipesDown;
+
     private int timeToDestroyObject = 7;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        SetPipesSkin();
+    }
     void Update()
     {
         if (GameManager.instance.curentGameState == GameState.InGame)
@@ -24,6 +33,15 @@ public class Obstacle : MonoBehaviour
         {
             Destroy(gameObject, timeToDestroyObject);
         }
+    }
+
+    private void SetPipesSkin()
+    {
+        int i = PlayerPrefs.GetInt("pipe_skin", 0);
+        var pipeDown = gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        var pipeUp = gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>();
+        pipeDown.sprite = pipesDown[i];
+        pipeUp.sprite = pipesUp[i];
     }
 
 }

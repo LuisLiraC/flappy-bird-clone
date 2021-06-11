@@ -22,13 +22,13 @@ TextureImporter:
     second: sprite_map_5
   - first:
       213: 894973520369286102
-    second: sprite_map_6
+    second: menu_button
   - first:
       213: -3524481393806190703
     second: sprite_map_7
   - first:
       213: 9006376326592736167
-    second: sprite_map_8
+    second: ok_button
   - first:
       213: 9560097050245860
     second: sprite_map_9
@@ -43,7 +43,7 @@ TextureImporter:
     second: sprite_map_14
   - first:
       213: -8131350765923793645
-    second: sprite_map_15
+    second: message_box
   - first:
       213: 1259684500969098551
     second: instructions
@@ -52,7 +52,7 @@ TextureImporter:
     second: sprite_map_17
   - first:
       213: -3665750632759986329
-    second: sprite_map_18
+    second: are_you_sure
   - first:
       213: -4800507386405109201
     second: sprite_map_19
@@ -79,10 +79,10 @@ TextureImporter:
     second: options_button
   - first:
       213: 3300685881868803390
-    second: sprite_map_28
+    second: green_pipe_button
   - first:
       213: 2097529562109511588
-    second: sprite_map_29
+    second: brown_pipe_button
   - first:
       213: 1511132737200806595
     second: play_button
@@ -148,10 +148,10 @@ TextureImporter:
     second: sprite_map_50
   - first:
       213: -5762351982163086593
-    second: sprite_map_51
+    second: brown_pipe_down
   - first:
       213: -5952482096821418217
-    second: sprite_map_52
+    second: brown_pipe_up
   - first:
       213: 8220469907726600862
     second: green_pipe_up
@@ -245,6 +245,15 @@ TextureImporter:
   - first:
       213: -8153076529601039904
     second: sprite_map_25
+  - first:
+      213: 3638226851535621859
+    second: yes_button
+  - first:
+      213: -6164006516270275604
+    second: reset_button
+  - first:
+      213: -1245352833183452357
+    second: no_button
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -472,7 +481,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_map_6
+      name: menu_button
       rect:
         serializedVersion: 2
         x: 462
@@ -514,7 +523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_map_8
+      name: ok_button
       rect:
         serializedVersion: 2
         x: 462
@@ -619,15 +628,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_map_15
+      name: message_box
       rect:
         serializedVersion: 2
-        x: 496
-        y: 423
-        width: 5
-        height: 5
+        x: 354
+        y: 303
+        width: 113
+        height: 57
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -682,15 +691,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_map_18
+      name: are_you_sure
       rect:
         serializedVersion: 2
-        x: 443
-        y: 415
-        width: 24
-        height: 5
+        x: 382
+        y: 292
+        width: 57
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,132 +707,6 @@ TextureImporter:
       bones: []
       spriteID: 7677d23b833a02dc0800000000000000
       internalID: -3665750632759986329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_map_19
-      rect:
-        serializedVersion: 2
-        x: 468
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f224fab57fb216db0800000000000000
-      internalID: -4800507386405109201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_map_20
-      rect:
-        serializedVersion: 2
-        x: 473
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3824a7f27c77b0630800000000000000
-      internalID: 3894338000170664579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_map_21
-      rect:
-        serializedVersion: 2
-        x: 478
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1987ff54a7becb430800000000000000
-      internalID: 3800171095986763921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_map_22
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7636602280f8f38f0800000000000000
-      internalID: -558570563677297817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_map_23
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 415
-        width: 7
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfd25de342668a860800000000000000
-      internalID: 7541389881890909692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_map_24
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ea710bc95d1d7840800000000000000
-      internalID: 5223363414314810085
       vertices: []
       indices: 
       edges: []
@@ -1270,7 +1153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_map_51
+      name: brown_pipe_down
       rect:
         serializedVersion: 2
         x: 0
@@ -1291,7 +1174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_map_52
+      name: brown_pipe_up
       rect:
         serializedVersion: 2
         x: 28
@@ -2000,6 +1883,111 @@ TextureImporter:
       bones: []
       spriteID: 9730fe6dc736959d0800000000000000
       internalID: -2785085506718858375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_pipe_button
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 199
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ddfef52546ecd20800000000000000
+      internalID: 3300685881868803390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_pipe_button
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 199
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a70b67060ceb1d10800000000000000
+      internalID: 2097529562109511588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yes_button
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 164
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee811a9b049d7230800000000000000
+      internalID: 3638226851535621859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reset_button
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 181
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce364845bbc057aa0800000000000000
+      internalID: -6164006516270275604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: no_button
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 148
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33f216423e97bee0800000000000000
+      internalID: -1245352833183452357
       vertices: []
       indices: 
       edges: []

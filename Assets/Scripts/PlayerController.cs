@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioClip hitAudio;
 
+    [SerializeField]
+    private List<RuntimeAnimatorController> skins;
+
     private AudioSource audio;
 
-    public Rigidbody2D rigidBody;
+    private Rigidbody2D rigidBody;
 
     private Animator animator;
     // Start is called before the first frame update
@@ -31,7 +35,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        
+        SetSkin();
     }
 
     public void InitialState()
@@ -75,5 +79,11 @@ public class PlayerController : MonoBehaviour
             animator.enabled = false;
             GameManager.instance.SetGameState(GameState.GameOver);
         }
+    }
+
+    public void SetSkin()
+    {
+        int skin = PlayerPrefs.GetInt("player_skin", 0);
+        animator.runtimeAnimatorController = skins[skin];
     }
 }

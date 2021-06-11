@@ -108,4 +108,9 @@ public class GameManager : MonoBehaviour
         #endif
     }
 
+    public void ApplyPrefs()
+    {
+        playerController.SetSkin();
+    }
+
 }
