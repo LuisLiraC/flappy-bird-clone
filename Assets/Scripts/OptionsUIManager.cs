@@ -26,6 +26,8 @@ public class OptionsUIManager : MonoBehaviour
         {
             instance = this;
         }
+
+        modalCanvas.enabled = false;
     }
 
     private void Start()
@@ -83,11 +85,13 @@ public class OptionsUIManager : MonoBehaviour
 
     public void ShowModal()
     {
+        modalCanvas.enabled = true;
         modalCanvas.sortingOrder = 2;
     }
 
     public void CloseModal()
     {
+        modalCanvas.enabled = false;
         modalCanvas.sortingOrder = -1;
     }
 }

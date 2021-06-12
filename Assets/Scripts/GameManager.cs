@@ -17,13 +17,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         if (instance == null)
         {
             instance = this;
         }
-        // PlayerPrefs.SetInt("max_score", 0);
     }
-    // Start is called before the first frame update
     void Start()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();

@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 1;
 
     [SerializeField]
+    private float gravityScale = 0.6f;
+
+    [SerializeField]
     private int angleJump = 15;
 
     [SerializeField]
@@ -17,8 +20,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioClip hitAudio;
 
+
     [SerializeField]
     private List<RuntimeAnimatorController> skins;
+
 
     private AudioSource audio;
 
@@ -49,7 +54,7 @@ public class PlayerController : MonoBehaviour
     public void StartGame()
     {
         InitialState();
-        rigidBody.gravityScale = 0.3f;
+        rigidBody.gravityScale = gravityScale;
     }
 
     // Update is called once per frame
